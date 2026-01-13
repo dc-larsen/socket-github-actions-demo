@@ -1,0 +1,12 @@
+{
+  "name": "socket-github-actions-demo",
+  "version": "1.0.0",
+  "description": "Demo repository for testing Socket's GitHub Actions ecosystem scanning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": ["socket", "security", "demo"],
+  "author": "Socket.dev",
+  "license": "MIT"
+}
