@@ -1,6 +1,5 @@
-# Demo workflow to test Socket's GitHub Actions scanning
-# This workflow intentionally uses a typosquat action for demonstration purposes
-# Socket should detect and flag "acitons/checkout" as a typosquat of "actions/checkout"
+# Demo workflow to test Socket's dependency scanning
+# This workflow installs a known typosquat package that Socket will flag
 
 name: Demo Build
 
@@ -14,9 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # INTENTIONAL TYPOSQUAT: "acitons" instead of "actions"
-      # Socket's GitHub Actions scanning should flag this
-      - uses: acitons/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
