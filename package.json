@@ -1,12 +1,15 @@
 {
   "name": "socket-github-actions-demo",
   "version": "1.0.0",
-  "description": "Demo repository for testing Socket's GitHub Actions ecosystem scanning",
+  "description": "Demo repository for testing Socket's dependency scanning",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No tests configured\""
   },
   "keywords": ["socket", "security", "demo"],
   "author": "Socket.dev",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodahs": "0.0.1-security"
+  }
 }

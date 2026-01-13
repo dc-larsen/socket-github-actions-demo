@@ -1,34 +1,25 @@
-# Socket GitHub Actions Scanning Demo
+# Socket Dependency Scanning Demo
 
-This repository demonstrates Socket's GitHub Actions ecosystem scanning feature.
+This repository demonstrates Socket's dependency scanning capabilities.
 
 ## Purpose
 
-When you fork this repo and connect it to Socket via the GitHub App, Socket will scan the workflow files in `.github/workflows/` and detect security issues with GitHub Actions used in your CI/CD pipelines.
+When you fork this repo and connect it to Socket via the GitHub App, Socket will scan the dependencies and detect security issues.
 
 ## What Socket Detects
 
-Socket scans your GitHub Actions workflows for:
-- Malware and obfuscated code
-- Typosquat actions (misspelled action names)
-- Unsafe data flows via Argus taint tracking
-- License and policy violations
+This demo includes `lodahs@0.0.1-security`, a known typosquat of the popular `lodash` package. Socket will flag this as:
+- **Possible typosquat attack** - Package name is similar to `lodash`
+- **Known malware** - This specific version is marked as a security test package
 
 ## Testing the Feature
 
 1. Fork this repository to your GitHub organization
 2. Ensure Socket's GitHub App is installed on your org
-3. Make sure GitHub Actions scanning is enabled (contact Socket support)
-4. Open a PR or trigger a scan
-5. Check the Socket dashboard for alerts under the `github` ecosystem
-
-## Demo Workflow
-
-The workflow in this repo intentionally uses a typosquat action (`acitons/checkout` instead of `actions/checkout`) to demonstrate Socket's detection capabilities.
-
-**Note:** The workflow will fail to run because the typosquat action doesn't exist, but Socket will still detect and flag it during the scan.
+3. Open a PR or push to trigger a scan
+4. Check the Socket dashboard for alerts
 
 ## Learn More
 
-- [Socket GitHub Actions Scanning](https://socket.dev/blog/introducing-github-actions-scanning-support)
 - [Socket Documentation](https://docs.socket.dev)
+- [Socket Security](https://socket.dev)
