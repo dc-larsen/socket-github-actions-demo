@@ -32,3 +32,4 @@ The workflow in this repo intentionally uses a typosquat action (`acitons/checko
 
 - [Socket GitHub Actions Scanning](https://socket.dev/blog/introducing-github-actions-scanning-support)
 - [Socket Documentation](https://docs.socket.dev)
+
